@@ -1,8 +1,11 @@
 
 function memoryPriceAdding(productId,price){
-    const memoryPrice = document.getElementById(productId);
-    mainMemoryPrice = parseInt(memoryPrice.innerText);
-    memoryPrice.innerText = price;
+    const productPrice = document.getElementById(productId);
+    mainMemoryPrice = parseInt(productPrice.innerText);
+    productPrice.innerText = price;
+    let totalPrice = document.getElementById('total-price');
+    const totalPriceText = parseInt(totalPrice.innerText);
+    totalPrice.innerText = totalPriceText + price;    
 }
 
 // extra memory added section
@@ -30,4 +33,24 @@ document.getElementById('free-deliver').addEventListener('click',function(){
 });
 document.getElementById('delivery-on-price').addEventListener('click',function(){
     memoryPriceAdding('delicery-price',20);
+});
+
+
+// promotion section  
+
+document.getElementById('promo-btn').addEventListener('click',function(){
+    //console.log('clicked');
+    let paymentPrice = 0;
+    const userPromo = document.getElementById('user-promo');
+    const userInput = userPromo.value;
+    if(userInput == 'stevekaku'){
+        const total = document.getElementById('total-price');
+        const totalprice = parseInt(total.innerText);
+        paymentPrice = totalprice - (totalprice *.2);
+        userPromo.value= ('');
+        document.getElementById('final-payment').innerText = paymentPrice;
+    }
+    else{
+        userPromo.value= ('');
+    }
 });
