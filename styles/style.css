@@ -1,0 +1,32 @@
+.page-orientation {
+  display: flex;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+
+.page-orientation img {
+  width: 60%;
+  height: 60%;
+}
+
+.total-section {
+  margin-top: 40px;
+  background-color: gainsboro;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.last-section {
+  text-align: center;
+  background-color: gainsboro;
+  height: 50px;
+}
+button {
+  height: 40px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  font-weight: 700;
+}
+p {
+  font-weight: normal;
+}
