@@ -5,7 +5,9 @@ function memoryPriceAdding(productId,price){
     productPrice.innerText = price;
     let totalPrice = document.getElementById('total-price');
     const totalPriceText = parseInt(totalPrice.innerText);
-    totalPrice.innerText = totalPriceText + price;    
+    totalPrice.innerText = totalPriceText + price;
+    let promoPrice = document.getElementById('final-payment');
+    promoPrice.innerText = totalPriceText;
 }
 
 // extra memory added section
@@ -36,7 +38,7 @@ document.getElementById('delivery-on-price').addEventListener('click',function()
 });
 
 
-// promotion section  
+// promotion section
 
 document.getElementById('promo-btn').addEventListener('click',function(){
     //console.log('clicked');
